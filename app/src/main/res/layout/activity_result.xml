@@ -19,21 +19,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/gender_text2" app:layout_constraintStart_toStartOf="@+id/concents_inputted_text"
-            android:layout_marginTop="80dp" app:layout_constraintTop_toBottomOf="@+id/concents_inputted_text"
+            android:layout_marginTop="40dp" app:layout_constraintTop_toBottomOf="@+id/concents_inputted_text"
             android:textSize="30sp"/>
     <TextView
             android:text="体重"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/weight_text2" app:layout_constraintStart_toStartOf="@+id/gender_text2"
-            app:layout_constraintTop_toBottomOf="@+id/gender_text2" android:layout_marginTop="70dp"
+            app:layout_constraintTop_toBottomOf="@+id/gender_text2" android:layout_marginTop="40dp"
             android:textSize="30sp"/>
     <TextView
             android:text="年齢"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/age_text2" app:layout_constraintStart_toStartOf="@+id/weight_text2"
-            app:layout_constraintTop_toBottomOf="@+id/weight_text2" android:layout_marginTop="70dp"
+            app:layout_constraintTop_toBottomOf="@+id/weight_text2" android:layout_marginTop="40dp"
             android:textSize="30sp"/>
     <TextView
             android:text="身体活動レベル"
@@ -42,14 +42,6 @@
             app:layout_constraintStart_toStartOf="@+id/age_text2"
             app:layout_constraintTop_toBottomOf="@+id/age_text2" android:layout_marginTop="70dp"
             android:textSize="30sp" android:id="@+id/level_of_physical_level_text2"/>
-    <Button
-            android:text="戻る"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/back_button" android:layout_marginBottom="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="160dp"
-            android:layout_marginStart="160dp" android:textSize="30sp"/>
     <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
@@ -79,4 +71,25 @@
             app:layout_constraintTop_toTopOf="@+id/level_of_physical_level_text2"
             app:layout_constraintEnd_toEndOf="@+id/age_num_text"
             android:textSize="30sp"/>
+    <TextView
+            android:text="以上の内容でよろしいですか"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11" app:layout_constraintStart_toStartOf="@+id/level_of_physical_level_text2"
+            app:layout_constraintTop_toBottomOf="@+id/level_of_physical_level_text2" android:layout_marginTop="40dp"
+            android:textSize="24sp"/>
+    <Button
+            android:text="はい"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/next_button" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="50dp" android:textSize="30sp"/>
+    <Button
+            android:text="いいえ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backpage_button"
+            app:layout_constraintBottom_toBottomOf="@+id/next_button" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="30dp" android:layout_marginRight="30dp" android:textSize="30sp"/>
 </android.support.constraint.ConstraintLayout>
