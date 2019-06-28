@@ -6,14 +6,107 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-
     <TextView
+            android:text="性別"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
+            android:id="@+id/gender_text" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp" android:layout_marginTop="30dp"
+            app:layout_constraintTop_toTopOf="parent" android:textSize="30sp"/>
+    <TextView
+            android:text="体重"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:id="@+id/weight_text" app:layout_constraintStart_toStartOf="@+id/gender_text"
+            android:layout_marginTop="60dp" app:layout_constraintTop_toBottomOf="@+id/gender_text"
+            android:textSize="30sp"/>
+    <TextView
+            android:text="年齢"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/age_text"
+            app:layout_constraintStart_toStartOf="@+id/gender_text" android:layout_marginTop="60dp"
+            app:layout_constraintTop_toBottomOf="@+id/weight_text" android:textSize="30sp"/>
+    <TextView
+            android:text="身体活動レベル"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/level_of_physical_activity_text" app:layout_constraintStart_toStartOf="@+id/gender_text"
+            android:layout_marginTop="60dp" app:layout_constraintTop_toBottomOf="@+id/age_text"
+            android:textSize="30sp"/>
+    <RadioGroup
+            android:layout_width="193dp"
+            android:layout_height="31dp"
+            android:id="@+id/radioGroup" android:orientation="horizontal" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="100dp">
+        <RadioButton
+                android:text="男"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/men" android:layout_weight="1"
+                android:textSize="18sp"/>
+        <RadioButton
+                android:text="女"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/women" android:layout_weight="1"
+                android:textSize="18sp"/>
+    </RadioGroup>
+    <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/seekBar" app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            android:layout_marginTop="50dp" android:max="250" android:progress="60"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/weight_number_text" app:layout_constraintTop_toTopOf="@+id/weight_text"
+            android:textSize="30sp"/>
+    <SeekBar
+            android:layout_width="408dp"
+            android:layout_height="42dp"
+            android:id="@+id/seekBar2"
+            android:max="120" android:progress="40" android:layout_marginTop="70dp"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/age_number_text"
+            app:layout_constraintTop_toTopOf="@+id/age_text" android:textSize="30sp"/>
+    <RadioGroup
+            android:layout_width="319dp"
+            android:layout_height="33dp"
+            android:id="@+id/radioGroup2" android:orientation="horizontal" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/level_of_physical_activity_text">
+        <RadioButton
+                android:text="低"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/low"
+                android:textSize="18sp"/>
+        <RadioButton
+                android:text="中"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/medium" android:layout_weight="1"
+                android:textSize="18sp"/>
+        <RadioButton
+                android:text="高"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/high"
+                android:textSize="18sp"/>
+    </RadioGroup>
+    <Button
+            android:text="決定"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/save_button" android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2" android:textSize="30sp"/>
 </android.support.constraint.ConstraintLayout>

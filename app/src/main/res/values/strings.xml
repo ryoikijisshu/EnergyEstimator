@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">EnergyEstimator</string>
+    <string name="result_men" translatable="false">男</string>
+    <string name="result_women" translatable="false">女</string>
+    <string name="result_level_low" translatable="false">低</string>
+    <string name="result_level_medium" translatable="false">中</string>
+    <string name="result_level_high" translatable="false">高</string>
 </resources>
