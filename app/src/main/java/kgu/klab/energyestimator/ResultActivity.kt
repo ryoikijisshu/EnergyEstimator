@@ -15,39 +15,40 @@ class ResultActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
-        val gender = intent.getIntExtra("gender",0)
-        val weight = intent.getIntExtra("weight",0)
-        val age = intent.getIntExtra("age",0)
-        val level = intent.getIntExtra("level",0)
+        val gender = intent.getIntExtra("gender", 0)
+        val weight = intent.getIntExtra("weight", 0)
+        val age = intent.getIntExtra("age", 0)
+        val level = intent.getIntExtra("level", 0)
 
-        if(gender==1)
-        {
+        if (gender == 1) {
             genderid.text = "男性"
-        }
-        else if(gender==2)
-        {
+        } else if (gender == 2) {
             genderid.text = "女性"
         }
-        if(level==1)
-        {
+        if (level == 1) {
             levelid.text = "低"
-        }
-        else if(level==2)
-        {
+        } else if (level == 2) {
             levelid.text = "中"
-        }
-        else if(level==3)
-        {
+        } else if (level == 3) {
             levelid.text = "高"
         }
 
-        weightid.text = weight.toString()+"kg"
-        ageid.text = age.toString()+"歳"
+        weightid.text = weight.toString() + "kg"
+        ageid.text = age.toString() + "歳"
 
-    button2.setOnClickListener{
-        val intent = Intent(application,MainActivity::class.java)
-        startActivity(intent)
-    }
+        button2.setOnClickListener {
+            val intent = Intent(application, ResultActivity2::class.java)
+            intent.putExtra("gender",gender)
+            intent.putExtra("weight",weight)
+            intent.putExtra("age",age)
+            intent.putExtra("level",level)
+            startActivity(intent)
 
+        }
+        button3.setOnClickListener {
+            val intent = Intent(application, MainActivity::class.java)
+            startActivity(intent)
+
+        }
     }
 }
