@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         //seekBar age
         seekBarAge.setProgress(20)
-        seekBarAge.setMax(100)
+        seekBarAge.setMax(99)
         var valueAge:Int=20
 
         seekBarAge.setOnSeekBarChangeListener(
@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
                     seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                     // 68 % のようにフォーマト、
                     // この場合、Locale.USが汎用的に推奨される
-                    valueAge=progress
-                    val str = String.format(Locale.US, "%d 歳", progress)
+                    valueAge=progress+1
+                    val str = String.format(Locale.US, "%d 歳", valueAge)
                     age2.text = str
                 }
 
@@ -94,10 +94,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        System.out.println("testA")
-
         buttonConfirm.setOnClickListener(){
-            System.out.println("test")
             val intent = Intent(this, SecondActivity::class.java)
             intent.putExtra("sex",valueSex)
             intent.putExtra("age",valueAge)

@@ -1,5 +1,6 @@
 package kgu.klab.energyestimator
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_second.*
@@ -37,6 +38,16 @@ class SecondActivity : AppCompatActivity() {
         textAge.text=valueAge.toString()+" 歳"
         textWeight.text=String.format("%.1f kg", valueWeight)
         textActivity.text=activity
+
+        buttonConfirm2.setOnClickListener(){
+            val intent = Intent(this, ThirdActivity::class.java)
+            intent.putExtra("sex",valueSex)
+            intent.putExtra("age",valueAge)
+            intent.putExtra("weight",valueWeight)
+            intent.putExtra("activity",valueActivity)
+            startActivity(intent)
+            finish()
+        }
 
         buttonBack.setOnClickListener(){
             finish()
