@@ -10,10 +10,136 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="性別"
+            android:textSize="30sp"
+            android:id="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="335dp" android:layout_marginRight="335dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/seibetu"/>
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seibetu"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView" android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="211dp"
+            android:layout_marginRight="211dp">
+        <RadioButton
+                android:text="男性"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/man" android:layout_weight="1"
+                android:textSize="30sp"/>
+        <RadioButton
+                android:text="女性"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/woman" android:layout_weight="1"
+                android:textSize="30sp"/>
+    </RadioGroup>
+    <SeekBar
+            android:layout_width="375dp"
+            android:layout_height="20dp"
+            android:id="@+id/seekBar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="18dp" android:layout_marginStart="18dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="18dp" android:layout_marginRight="18dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/weight_result"/>
+    <TextView
+            android:text="体重"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/weight"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/weight_result" android:layout_marginEnd="17dp"
+            android:layout_marginRight="17dp" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/seibetu"/>
+    <TextView
+            android:layout_width="86dp"
+            android:layout_height="47dp"
+            android:id="@+id/weight_result" android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="232dp" android:layout_marginRight="232dp"
+            app:layout_constraintStart_toEndOf="@+id/weight" android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/seibetu"/>
+    <TextView
+            android:text="年齢"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/age" android:textSize="30sp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="335dp" android:layout_marginRight="335dp"/>
+    <SeekBar
+            android:layout_width="375dp"
+            android:layout_height="20dp"
+            android:id="@+id/seekBar2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp" android:layout_marginRight="20dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/age_result"/>
+    <TextView
+            android:layout_width="86dp"
+            android:layout_height="47dp"
+            android:id="@+id/age_result"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="232dp" android:layout_marginRight="232dp"
+            app:layout_constraintStart_toEndOf="@+id/age" android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar"/>
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/level"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:layout_marginBottom="114dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="209dp"
+            android:layout_marginRight="209dp">
+        <RadioButton
+                android:text="低"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/low" android:layout_weight="1"
+                android:textSize="30sp"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/nomal" android:layout_weight="1"
+                android:text="中" android:textSize="30sp"/>
+        <RadioButton
+                android:text="高"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/high" android:layout_weight="1"
+                android:textSize="30sp"/>
+    </RadioGroup>
+    <TextView
+            android:text="身体活動レベル"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6" android:textSize="30sp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar2" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="184dp" android:layout_marginRight="184dp"
+            app:layout_constraintBottom_toTopOf="@+id/level"/>
+    <Button
+            android:text="計算"
+            android:layout_width="99dp"
+            android:layout_height="56dp"
+            android:id="@+id/calculate" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="161dp"
+            android:layout_marginStart="161dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="162dp" android:layout_marginRight="162dp" android:layout_marginBottom="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="24sp"
+            android:onClick="onCalculateButtonTapped"/>
 
 </android.support.constraint.ConstraintLayout>
