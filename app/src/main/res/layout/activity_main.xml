@@ -10,10 +10,122 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="性別"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.138"
+            app:layout_constraintVertical_bias="0.064" android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:id="@+id/textView"/>
+    <RadioGroup
+            android:layout_width="215dp"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.224" android:id="@+id/genderGroup" android:checkedButton="@id/man">
+        <RadioButton
+                android:text="男性"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/man" android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        <RadioButton
+                android:text="女性"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/woman" android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+    </RadioGroup>
+    <RadioGroup
+            android:layout_width="284dp"
+            android:layout_height="54dp"
+            android:orientation="horizontal" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.39"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" android:layout_marginTop="32dp"
+            android:id="@+id/activeGroup" android:checkedButton="@id/medium">
+        <RadioButton
+                android:text="低"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/low" android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        <RadioButton
+                android:text="中"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/medium" android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        <RadioButton
+                android:text="高"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/high" android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+    </RadioGroup>
+    <SeekBar
+            android:layout_width="178dp"
+            android:layout_height="35dp"
+            android:id="@+id/weightBar"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="32dp"
+            android:max="150" android:progress="70"/>
+    <SeekBar
+            android:layout_width="207dp"
+            android:layout_height="37dp"
+            android:id="@+id/ageBar"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="32dp"
+            app:layout_constraintHorizontal_bias="0.579" android:max="100" android:progress="20"/>
+    <TextView
+            android:text="体重"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/genderGroup"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+    />
+    <TextView
+            android:text="年齢"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/weightBar" android:layout_marginTop="32dp"/>
+    <TextView
+            android:text="身体活動レベル"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/ageBar" android:layout_marginTop="32dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/weightText"
+            app:layout_constraintTop_toTopOf="@+id/textView2" app:layout_constraintStart_toEndOf="@+id/textView2"
+            android:layout_marginLeft="68dp" android:layout_marginStart="68dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/textView3" app:layout_constraintStart_toEndOf="@+id/textView3"
+            android:layout_marginLeft="68dp" android:layout_marginStart="68dp" android:id="@+id/ageText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+    <Button
+            android:text="計算"
+            android:layout_width="143dp"
+            android:layout_height="53dp"
+            android:id="@+id/save"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/activeGroup"
+    />
 
 </android.support.constraint.ConstraintLayout>
