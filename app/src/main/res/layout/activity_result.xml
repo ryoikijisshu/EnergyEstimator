@@ -79,8 +79,19 @@
             android:text="戻る"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/back" android:layout_marginBottom="150dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" android:textSize="30sp"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" android:textSize="30sp"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/keisan" android:layout_marginRight="8dp"/>
+    <Button
+            android:text="計算"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/keisan"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="100dp"
+            android:layout_marginRight="100dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="@+id/back"/>
 </android.support.constraint.ConstraintLayout>

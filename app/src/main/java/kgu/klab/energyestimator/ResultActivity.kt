@@ -1,5 +1,6 @@
 package kgu.klab.energyestimator
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_result.*
@@ -34,8 +35,18 @@ class ResultActivity : AppCompatActivity() {
         weightid.text = weight.toString()+"kg"
         ageid.text = age.toString()+"歳"
 
+        keisan.setOnClickListener {
+            val intent = Intent(this,Result2Activity::class.java)
+            intent.putExtra("gender", gender)
+            intent.putExtra("weight", weight)
+            intent.putExtra("age", age)
+            intent.putExtra("level", level)
+            startActivity(intent)
+        }
+
         back.setOnClickListener {
-            finish()
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }
