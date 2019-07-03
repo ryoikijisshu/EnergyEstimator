@@ -16,7 +16,7 @@ class ResultActivity : AppCompatActivity() {
         val weightvalue = intent.getIntExtra("WEIGHT_KEY", 0)
         val agevalue = intent.getIntExtra("AGE_KEY", 0)
         val levelvalue = intent.getIntExtra("LEVEL_KEY", 0)
-        var energy: Double = 0.0
+        var energy: Int = 0
         var calculatedvalue: Double = 0.0
         var activity: Double = 0.0
         if (sexvalue == 1) {
@@ -91,7 +91,7 @@ class ResultActivity : AppCompatActivity() {
                 in 70..99 -> activity = 1.95
             }
         }
-        energy=weightvalue*calculatedvalue*activity
+        energy=(weightvalue*calculatedvalue*activity).toInt()
         resulttext.text=energy.toString()+"kcalです"
         backbutton.setOnClickListener {
             val intent = Intent(application, MainActivity::class.java)
