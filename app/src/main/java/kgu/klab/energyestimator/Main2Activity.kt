@@ -1,5 +1,6 @@
 package kgu.klab.energyestimator
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main2.*
@@ -22,15 +23,24 @@ class Main2Activity : AppCompatActivity() {
         val oldid = intent.getIntExtra("Old",0)
         o_View.setText( "" + oldid + "歳")
 
-        val activityid = intent.getIntExtra("Sex",0)
+        val activityid = intent.getIntExtra("Activity",0)
         when(activityid){
             0 -> a_View.setText("低")
-            1 -> s_View.setText("中")
-            2 -> s_View.setText("高")
+            1 -> a_View.setText("中")
+            2 -> a_View.setText("高")
         }
 
-        back.setOnClickListener{
+        b_back.setOnClickListener{
             finish()
+        }
+
+        go.setOnClickListener{
+            val intent =  Intent(this, Main3Activity::class.java)
+            intent.putExtra("Sex",sexid)
+            intent.putExtra("Weight",weightid)
+            intent.putExtra("Old",oldid)
+            intent.putExtra("Activity",activityid)
+            startActivity(intent)
         }
     }
 }
