@@ -146,7 +146,7 @@ class ResultActivity2 : AppCompatActivity() {
             else if( 50 <= age_number && age_number <= 69){
                 sintai_number = 1.50
             }
-            else if( 70 >= age_number){
+            else if( 70 <= age_number){
                 sintai_number = 1.45
             }
             else
